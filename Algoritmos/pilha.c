@@ -12,13 +12,19 @@ int length = 0;
 
 typedef struct pessoa Pessoa;
 
-void insert_sort(Prato *pilha){
-
- for(int i = 0; i < length; i++){
-
- }
+void select_sort(Prato *p){
+  int menor_valor;
+  if(pilha == NULL){
+    printf("Pilha vazia");
+  }else{
+    for(int i = 0; i < length; i++){
+      menor_valor = i;
+      for(int j = i + 1; j < length; j++){
+        printf("%d", p->valor);
+      }
+    }
+  }
 }
-
 void push(int valor){
   Prato *p = (Prato*) malloc(sizeof(Prato));
   p->valor = valor;
@@ -53,5 +59,6 @@ int main(void){
   Prato *teste = pilha;
   print(teste);
   printf("Tamanho da pilha: %d\n\n", length);
+  select_sort(teste);
   return 0;
 } 
